@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Google AdMob crawler
+User-agent: Mediapartners-Google
+Allow: /
