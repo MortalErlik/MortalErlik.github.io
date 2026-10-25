@@ -1,94 +1,101 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('privacyModal');
-  const openButtons = document.querySelectorAll('[data-open-privacy]');
-  const closeButtons = document.querySelectorAll('[data-close-privacy]');
+// The privacy policy used to open as a dialog at /#privacy; old links still land on it.
+if (location.hash === '#privacy') location.replace('privacy.html');
 
-  const openModal = () => {
-    if (!modal) return;
-    modal.showModal();
-    document.body.style.overflow = 'hidden';
-  };
+const header = document.querySelector('.top');
+const onScroll = () => header && header.classList.toggle('scrolled', scrollY > 8);
+addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-  const closeModal = () => {
-    if (!modal) return;
-    modal.close();
-    document.body.style.overflow = '';
-    if (window.location.hash === '#privacy') {
-      history.replaceState(null, null, ' ');
+const toast = document.getElementById('toast');
+let toastTimer;
+const show = (text) => {
+  if (!toast) return;
+  toast.textContent = text;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+};
+
+document.querySelectorAll('[data-copy-email]').forEach((button) => {
+  button.addEventListener('click', async () => {
+    const email = 'coralstudiosdev@yandex.com';
+    try {
+      await navigator.clipboard.writeText(email);
+      show('Email address copied');
+    } catch {
+      location.href = 'mailto:' + email;
     }
-  };
-
-  openButtons.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openModal();
-    });
-  });
-
-  closeButtons.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      closeModal();
-    });
-  });
-
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      const rect = modal.getBoundingClientRect();
-      const inDialog = (
-        rect.top <= e.clientY &&
-        e.clientY <= rect.top + rect.height &&
-        rect.left <= e.clientX &&
-        e.clientX <= rect.left + rect.width
-      );
-      if (!inDialog) closeModal();
-    });
-
-    modal.addEventListener('cancel', () => {
-      document.body.style.overflow = '';
-      if (window.location.hash === '#privacy') {
-        history.replaceState(null, null, ' ');
-      }
-    });
-  }
-
-  const syncHash = () => {
-    if (window.location.hash === '#privacy') openModal();
-  };
-  syncHash();
-  window.addEventListener('hashchange', syncHash);
-
-  const toast = document.getElementById('toast');
-  const toastMessage = document.getElementById('toastMessage');
-  let toastTimer;
-
-  const showToast = (msg) => {
-    if (!toast) return;
-    if (toastMessage) toastMessage.textContent = msg;
-    toast.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove('show'), 3200);
-  };
-
-  document.querySelectorAll('[data-copy-email]').forEach((btn) => {
-    btn.addEventListener('click', async (e) => {
-      e.preventDefault();
-      const email = 'coralstudiosdev@yandex.com';
-      try {
-        if (navigator.clipboard) {
-          await navigator.clipboard.writeText(email);
-        } else {
-          const input = document.createElement('input');
-          input.value = email;
-          document.body.appendChild(input);
-          input.select();
-          document.execCommand('copy');
-          input.remove();
-        }
-        showToast(`Email copied to clipboard! (${email})`);
-      } catch {
-        window.location.href = `mailto:${email}`;
-      }
-    });
   });
 });
+
+// Scroll-driven parts of the home page. Without motion (or without this
+// script) every step simply shows its final state.
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.documentElement.classList.add('js');
+
+// Fade sections up the first time they are seen.
+const seen = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add('in'); seen.unobserve(e.target); }
+}, { rootMargin: '0px 0px -12% 0px' });
+document.querySelectorAll('.reveal').forEach((el) => (still ? el.classList.add('in') : seen.observe(el)));
+
+const progressed = [...document.querySelectorAll('[data-progress]')];
+const wall = document.querySelector('.lang-wall');
+const words = wall ? [...wall.children] : [];
+const stage = document.querySelector('.stage');
+const steps = stage ? [...stage.querySelectorAll('.step')] : [];
+const shots = stage ? [...stage.querySelectorAll('.frame img')] : [];
+const dots = stage ? [...stage.querySelectorAll('.dots li')] : [];
+const frame = stage && stage.querySelector('.frame');
+let current = -1;
+
+// 0 when the element's top enters the bottom of the viewport, 1 when its
+// centre reaches the middle of it.
+const through = (el) => {
+  const r = el.getBoundingClientRect();
+  return Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight / 2 + r.height / 2)));
+};
+
+const sizeFrame = (portrait) => {
+  const box = frame.parentElement.getBoundingClientRect();
+  const maxH = innerHeight * (innerWidth < 900 ? 0.5 : 0.72);
+  let w, h;
+  if (portrait) { h = maxH; w = h * 1200 / 1848; }
+  else { w = Math.min(box.width, maxH * 2000 / 1052); h = w * 1052 / 2000; }
+  frame.style.setProperty('--fw', w + 'px');
+  frame.style.setProperty('--fh', h + 'px');
+};
+
+const showStep = (i) => {
+  if (i === current) return;
+  const turning = (i === 3) !== (current === 3);
+  current = i;
+  steps.forEach((s, k) => s.classList.toggle('on', k === i));
+  shots.forEach((s, k) => s.classList.toggle('on', k === i));
+  dots.forEach((d, k) => d.classList.toggle('on', k === i));
+  if (turning || frame.dataset.sized !== '1') {
+    frame.classList.toggle('portrait', i === 3);
+    sizeFrame(i === 3);
+    frame.dataset.sized = '1';
+  }
+};
+
+const tick = () => {
+  for (const el of progressed) el.style.setProperty('--p', still ? 1 : through(el).toFixed(3));
+  if (wall) {
+    const r = wall.getBoundingClientRect();
+    const p = still ? 1 : Math.min(1, Math.max(0, (innerHeight * 0.85 - r.top) / (r.height + innerHeight * 0.25)));
+    words.forEach((w, k) => w.classList.toggle('lit', p * words.length > k));
+  }
+  if (stage) {
+    const r = stage.getBoundingClientRect();
+    const p = Math.min(0.999, Math.max(0, -r.top / (r.height - innerHeight)));
+    showStep(Math.floor(p * steps.length));
+  }
+};
+
+let queued = false;
+const onFrame = () => { queued = false; tick(); };
+addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(onFrame); } }, { passive: true });
+addEventListener('resize', () => { if (frame) sizeFrame(current === 3); tick(); });
+tick();

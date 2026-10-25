@@ -1,624 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coral Studios | Privacy-First &amp; Lightweight Android Apps</title>
-  
-  <meta name="description" content="Coral Studios - Independent Android app studio crafting privacy-first, battery-friendly, and local-first lightweight utilities.">
-  <meta name="keywords" content="Coral Studios, Android Apps, Simple Prayer Times, Prayer Times Widget, Paperless Studio, Privacy-First Android Apps">
-  <meta name="author" content="Coral Studios">
-  <meta name="theme-color" content="#07070b">
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coral Code — A development environment for Android</title>
+  <meta name="description" content="Coral Code runs a Linux system inside the app: write, run, debug and build in 13 languages and Flutter, on an Android tablet or phone from 4 GB of RAM up.">
+  <meta name="theme-color" content="#000000">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Coral Studios | Privacy-First Lightweight Android Apps">
-  <meta property="og:description" content="Zero telemetry, battery-friendly, and local-first independent Android utilities.">
   <meta property="og:site_name" content="Coral Studios">
-  
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta property="og:title" content="Coral Code">
+  <meta property="og:description" content="A real Linux workstation, on your tablet.">
+  <meta property="og:image" content="assets/shots/workspace-1000.webp">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/coral-code-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home">
 
-  <div class="bg-mesh" aria-hidden="true">
-    <div class="ambient-light ambient-purple"></div>
-    <div class="ambient-light ambient-indigo"></div>
-    <div class="ambient-light ambient-magenta"></div>
-  </div>
-  <div class="bg-grid" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand-link" aria-label="Coral Studios Home">
-        <img src="assets/logo.svg" alt="Coral Studios Logo" class="brand-logo-img" width="200" height="46">
-      </a>
-
-      <nav class="header-nav" aria-label="Main Navigation">
-        <a href="#apps" class="nav-link">Apps</a>
-        <a href="#values" class="nav-link">Philosophy</a>
-        <a href="#privacy" class="nav-link" data-open-privacy>Privacy Policy</a>
+  <header class="top">
+    <div class="wrap">
+      <a class="studio" href="./">Coral <span>Studios</span></a>
+      <nav aria-label="Main">
+        <a href="#coral-code" class="wide">Coral Code</a>
+        <a href="#apps">Apps</a>
+        <a href="open-source.html">Open source</a>
+        <a href="privacy.html">Privacy</a>
       </nav>
-
-      <div class="header-cta-group">
-        <button type="button" class="email-pill-btn" data-copy-email title="Copy official email address">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-          </svg>
-          <span>coralstudiosdev@yandex.com</span>
-        </button>
-      </div>
     </div>
   </header>
 
   <main>
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-pill">
-          <span class="hero-pill-dot"></span>
-          <span>Independent Android App Studio</span>
+    <!-- 1. The product, landing flat as you scroll. -->
+    <section class="hero" id="coral-code">
+      <div class="wrap center">
+        <img class="mark" src="assets/coral-code-192.png" alt="" width="64" height="64">
+        <p class="product">Coral Code</p>
+        <h1>Your whole dev setup.<br><span class="glow">Now on your tablet.</span></h1>
+        <p class="lede">Real Linux. Real toolchains. Nothing in the cloud.</p>
+        <div class="actions">
+          <span class="status">Coming soon to Google Play</span>
+          <a class="link" href="mailto:coralstudiosdev@yandex.com?subject=Coral%20Code">Tell me when it’s out ›</a>
         </div>
+      </div>
+      <div class="land" data-progress>
+        <figure class="device">
+          <img src="assets/shots/workspace.webp" srcset="assets/shots/workspace-1000.webp 1000w, assets/shots/workspace.webp 2000w" sizes="(max-width: 1180px) 92vw, 1100px" alt="Coral Code on a tablet: files, a Python file in the editor, the program’s output and a live preview of the page it serves." width="2000" height="1052">
+        </figure>
+      </div>
+    </section>
 
-        <h1 class="hero-title">
-          Privacy-First, Battery-Friendly, <br>
-          <span class="hero-title-highlight">Local-First</span> Android Apps
-        </h1>
+    <!-- 2. The headline claim, right after the product. -->
+    <section class="langs-block">
+      <div class="wrap center">
+        <h2 class="reveal">13 languages and Flutter.<br><span class="glow">One tap each.</span></h2>
+        <p class="sub reveal">Real compilers. Real debuggers. In the versions you choose.</p>
+      </div>
+      <ul class="lang-wall" aria-label="Supported languages">
+        <li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Go</li><li>Rust</li><li>C</li><li>C++</li>
+        <li>Java</li><li>Kotlin</li><li>Dart</li><li>Flutter</li><li>PHP</li><li>Lua</li><li>Zig</li>
+      </ul>
+    </section>
 
-        <p class="hero-description">
-          Engineered without invasive tracking, background telemetry, or bloated frameworks — building independent Android utilities that simply do their job with speed and precision.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#apps" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            Explore Apps
-          </a>
-          <a href="mailto:coralstudiosdev@yandex.com" class="btn btn-secondary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            Get in Touch
-          </a>
+    <!-- 3. One device, transforming as you scroll. -->
+    <section class="stage">
+      <div class="stage-pin">
+        <div class="stage-text" aria-live="polite">
+          <div class="step" data-step="0"><p class="kicker">Classic</p><h2>Everything at a glance.</h2><p>Files, code, console and preview. Side by side.</p></div>
+          <div class="step" data-step="1"><p class="kicker">Focus</p><h2>Just the code.</h2><p>One island fills the screen. The rest are a tap away.</p></div>
+          <div class="step" data-step="2"><p class="kicker">Free</p><h2>Your layout. Your rules.</h2><p>Split anything. Drag anything. Save it for later.</p></div>
+          <div class="step" data-step="3"><p class="kicker">One tap</p><h2>Now it’s a phone.</h2><p>Tap the logo to flip between tablet and phone layouts. On DeX, it opens straight to desktop.</p></div>
+        </div>
+        <div class="stage-device">
+          <div class="frame">
+            <img data-shot="0" src="assets/shots/workspace-1000.webp" srcset="assets/shots/workspace-1000.webp 1000w, assets/shots/workspace.webp 2000w" sizes="60vw" alt="Classic layout." width="2000" height="1052">
+            <img data-shot="1" src="assets/shots/focus-sm.webp" srcset="assets/shots/focus-sm.webp 1000w, assets/shots/focus.webp 2000w" sizes="60vw" alt="Focus layout: the editor alone." width="2000" height="1052">
+            <img data-shot="2" src="assets/shots/free-sm.webp" srcset="assets/shots/free-sm.webp 1000w, assets/shots/free.webp 2000w" sizes="60vw" alt="Free layout: preview, Claude Code, console and editor in columns." width="2000" height="1052">
+            <img data-shot="3" src="assets/shots/phone-code-sm.webp" srcset="assets/shots/phone-code-sm.webp 600w, assets/shots/phone-code.webp 1200w" sizes="40vh" alt="Phone layout: the editor with a tab bar." width="1200" height="1848">
+          </div>
+          <ol class="dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
         </div>
       </div>
     </section>
 
-    <section class="section" id="apps">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Product Showcase</span>
-          <h2 class="section-title">Our Applications</h2>
-          <p class="section-subtitle">Lightweight utilities built around user privacy, zero bloat, and optimal hardware efficiency.</p>
-        </div>
-
-        <div class="products-grid">
-          <article class="product-card card-active">
-            <div class="card-top">
-              <div class="app-icon-wrapper">
-                <img src="assets/icon-prayer.png" alt="Simple Prayer Times & Widget App Icon" class="app-icon-img" width="76" height="76">
-              </div>
-              <span class="status-badge status-live">
-                <span class="status-live-dot"></span>
-                Live on Google Play
-              </span>
-            </div>
-
-            <h3 class="app-title">Simple Prayer Times &amp; Widget</h3>
-
-            <p class="app-description">
-              An offline-first, battery-efficient prayer times utility and home screen widget with absolute zero data collection and clean Material design.
-            </p>
-
-            <div class="feature-tags">
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                100% Offline
-              </span>
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Battery Friendly
-              </span>
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Zero Data Collection
-              </span>
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Material You Widget
-              </span>
-            </div>
-
-            <div class="card-action">
-              <a href="https://play.google.com/store/apps/details?id=com.coralstudios.sadenamaz" 
-                 target="_blank" 
-                 rel="noopener noreferrer" 
-                 class="btn btn-play"
-                 aria-label="Download Simple Prayer Times & Widget on Google Play">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3.609 1.814L13.793 12 3.61 22.186a1.99 1.99 0 0 1-.22-.962V2.776c0-.36.08-.7.22-.962zm11.255 11.257l2.392 2.392-12.01 6.877 9.618-9.269zm2.392-2.392l-2.392 2.392-9.618-9.27 12.01 6.878zm1.071 1.071l3.528 2.02a1.49 1.49 0 0 1 0 2.58l-3.528 2.02-2.392-2.392 2.392-2.228z"/>
-                </svg>
-                Get it on Google Play
-              </a>
-            </div>
-          </article>
-
-          <article class="product-card card-upcoming">
-            <div class="card-top">
-              <div class="app-icon-wrapper">
-                <img src="assets/icon-paperless.svg" alt="Paperless Studio App Icon" class="app-icon-img" width="76" height="76">
-              </div>
-              <span class="status-badge status-upcoming">
-                <span class="status-upcoming-dot"></span>
-                Coming Soon
-              </span>
-            </div>
-
-            <h3 class="app-title">Paperless Studio</h3>
-
-            <p class="app-description">
-              A local-first document and PDF management workspace powered by a high-performance native Rust engine, executing entirely on-device with zero cloud reliance.
-            </p>
-
-            <div class="feature-tags">
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                Rust Engine
-              </span>
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Local Processing
-              </span>
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Zero Cloud Dependence
-              </span>
-              <span class="feature-tag">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                Ultra Fast
-              </span>
-            </div>
-
-            <div class="card-action">
-              <button type="button" class="btn btn-disabled" disabled aria-disabled="true">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-                In Active Development
-              </button>
-            </div>
-          </article>
-        </div>
-
-        <div class="verification-banner">
-          <div class="verification-content">
-            <div class="verification-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <polyline points="9 12 11 14 15 10"></polyline>
-              </svg>
-            </div>
-            <div class="verification-text">
-              <h4>Google AdMob &amp; Google Play Developer Verification</h4>
-              <p>Authorized digital seller records verified at our independent domain root (app-ads.txt).</p>
-            </div>
-          </div>
-          <a href="app-ads.txt" target="_blank" class="verification-link">
-            <span>/app-ads.txt</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </a>
-        </div>
+    <!-- 4. The constraint it was built for. -->
+    <section class="ram">
+      <div class="wrap center">
+        <p class="big" data-progress>4&nbsp;GB</p>
+        <h2 class="reveal">Light on memory.<br>Scales to whatever you have.</h2>
+        <p class="sub reveal">Runs smoothly on everyday tablets. Give it more memory, and builds speed up on their own.</p>
+        <p class="fine reveal">Tested on a TCL NXTPAPER 11 with 4 GB of RAM.</p>
       </div>
     </section>
 
-    <section class="section" id="values">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Design Philosophy</span>
-          <h2 class="section-title">Why Coral Studios?</h2>
-          <p class="section-subtitle">Strict engineering principles to keep your software clean, private, and free from telemetry clutter.</p>
+    <!-- 5. The assistant. -->
+    <section class="block split">
+      <div class="wrap">
+        <div class="split-text reveal">
+          <p class="kicker">AI</p>
+          <h2>Your AI pair programmer. Right next to the code.</h2>
+          <p class="sub">Run Claude Code, Codex or Gemini CLI inside your project. Watch it work in the preview.</p>
         </div>
+        <figure class="panel tall reveal">
+          <img src="assets/shots/assistant.webp" alt="Claude Code open in the assistant island of Coral Code, in the project folder." width="514" height="402" loading="lazy">
+        </figure>
+      </div>
+    </section>
 
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
-            <h3 class="value-title">Zero Personal Data Collection</h3>
-            <p class="value-text">
-              Our apps never request, collect, store, or transmit your name, phone number, email address, or contact list. We do not require accounts or user registration.
-            </p>
-          </div>
+    <!-- 6. The rest, briefly. -->
+    <section class="block">
+      <div class="wrap center"><h2 class="reveal">Everything else you’d expect.</h2></div>
+      <div class="wrap">
+        <ul class="tiles">
+          <li class="reveal"><h3>Linux inside</h3><p>A full Alpine Linux. Install anything with apk.</p></li>
+          <li class="reveal"><h3>Android apps</h3><p>Build and sign real APKs. On the tablet itself.</p></li>
+          <li class="reveal"><h3>Debugger</h3><p>Breakpoints and watches, in every language.</p></li>
+          <li class="reveal"><h3>Live preview</h3><p>Your page, running next to your code.</p></li>
+          <li class="reveal"><h3>Terminal and Git</h3><p>A real shell and real Git, right in your project.</p></li>
+          <li class="reveal"><h3>Keyboard and mouse</h3><p>Plug them in, and it works like a laptop.</p></li>
+        </ul>
+        <p class="fine center">Free and Side by side layouts, the terminal and the AI assistant are part of Coral Code Pro.</p>
+      </div>
+    </section>
 
-          <div class="value-card">
-            <div class="value-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
-            </div>
-            <h3 class="value-title">Battery &amp; System Efficiency</h3>
-            <p class="value-text">
-              No hidden background services or battery-draining telemetry. Computations run locally and only when requested, respecting your device resources.
-            </p>
+    <section class="block" id="apps">
+      <div class="wrap center">
+        <p class="kicker">Also from Coral Studios</p>
+        <article class="app reveal">
+          <img src="assets/prayer-times-144.png" alt="" width="72" height="72">
+          <div>
+            <h3>Simple Prayer Times &amp; Widget</h3>
+            <p>Prayer times and a home-screen widget. Works offline, collects no personal data.</p>
           </div>
-
-          <div class="value-card">
-            <div class="value-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-              </svg>
-            </div>
-            <h3 class="value-title">Local &amp; Offline Architecture</h3>
-            <p class="value-text">
-              Core features work without internet access. Calculations and documents remain securely on your device rather than on remote servers.
-            </p>
-          </div>
-        </div>
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.coralstudios.sadenamaz" target="_blank" rel="noopener noreferrer">Google Play</a>
+        </article>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="assets/logo.svg" alt="Coral Studios Logo" width="180" height="42">
-          <p>
-            Independent Android app studio crafting privacy-first, battery-friendly, and local-first software utilities.
-          </p>
-        </div>
-
-        <div class="footer-links-group">
-          <div class="footer-column">
-            <h5>Apps</h5>
-            <ul class="footer-links">
-              <li>
-                <a href="https://play.google.com/store/apps/details?id=com.coralstudios.sadenamaz" target="_blank" rel="noopener noreferrer" class="footer-link">
-                  Simple Prayer Times &amp; Widget
-                </a>
-              </li>
-              <li>
-                <span class="footer-link" style="color: var(--text-dim);">Paperless Studio (Upcoming)</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h5>Legal &amp; Verification</h5>
-            <ul class="footer-links">
-              <li>
-                <a href="#privacy" class="footer-link" data-open-privacy>Privacy Policy (Modal)</a>
-              </li>
-              <li>
-                <a href="privacy.html" class="footer-link">Privacy Policy (Direct URL)</a>
-              </li>
-              <li>
-                <a href="app-ads.txt" target="_blank" class="footer-link">app-ads.txt (AdMob)</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h5>Contact</h5>
-            <ul class="footer-links">
-              <li>
-                <a href="mailto:coralstudiosdev@yandex.com" class="footer-link">coralstudiosdev@yandex.com</a>
-              </li>
-              <li>
-                <button type="button" class="footer-link" data-copy-email style="background: none; border: none; padding: 0; cursor: pointer;">
-                  Copy Email
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Coral Studios. All rights reserved.</p>
-        <p>Google Play and Google AdMob are trademarks of Google LLC.</p>
-      </div>
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Coral Studios · Mersin, Türkiye</span>
+      <nav aria-label="Footer">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="open-source.html">Open-source notices</a>
+        <a href="app-ads.txt">app-ads.txt</a>
+        <button type="button" class="copy-email" data-copy-email>coralstudiosdev@yandex.com</button>
+      </nav>
     </div>
   </footer>
 
-  <dialog id="privacyModal" class="privacy-modal" aria-labelledby="modalTitle">
-    <div class="modal-header">
-      <div class="modal-title-wrap">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-        </svg>
-        <h3 id="modalTitle">Privacy Policy</h3>
-      </div>
-
-      <button type="button" class="modal-close-btn" data-close-privacy aria-label="Close">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-
-    <div class="modal-body">
-      <p style="margin-bottom: 20px; color: var(--text-primary); font-weight: 500;">
-        This privacy policy is applicable to the <strong>Sade Namaz Vakti &amp; Widget</strong> app for mobile devices, together with any related services operated by <strong>Coral Studios</strong> (collectively, the "Application"). Coral Studios is hereinafter referred to as the "Service Provider".
-      </p>
-
-      <div class="policy-block">
-        <h4><span>1.</span> Data Controller Information</h4>
-        <p>
-          Coral Studios acts as the Data Controller responsible for the processing of your personal data.
-        </p>
-        <ul>
-          <li><strong>Name:</strong> Coral Studios</li>
-          <li><strong>Address:</strong> Mersin, Türkiye</li>
-          <li><strong>Email:</strong> <a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a></li>
-        </ul>
-        <p>
-          For data protection inquiries and to exercise your GDPR rights, please contact the Data Controller using the contact information above.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>2.</span> What information does the Application obtain and how is it used?</h4>
-        <p>
-          The Application and related services acquire the information you supply when you download, access, or register for the service. Registration with the Service Provider is not mandatory. However, you might not be able to use some of the features offered by the service unless you register.
-        </p>
-        <p>
-          The Service Provider may also use the information you provide to send important information, required notices, and, where permitted by law, marketing communications.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>3.</span> Legal basis for processing your personal data</h4>
-        <p>
-          Where the GDPR applies, the Service Provider relies on one or more lawful bases to process your personal data, including:
-        </p>
-        <ul>
-          <li><strong>Contract performance:</strong> processing necessary to provide the Application or fulfil a contract with you.</li>
-          <li><strong>Consent:</strong> where you have given explicit consent to processing, including for marketing, analytics, or optional features. You may withdraw consent at any time without affecting processing that occurred before withdrawal.</li>
-          <li><strong>Legitimate interests:</strong> where processing is necessary for the Service Provider's specific legitimate interests, such as maintaining network and information security, preventing fraud and abuse, or improving the Application's core functionality through analytics, provided those interests are not overridden by your data protection rights or fundamental freedoms.</li>
-          <li><strong>Legal obligation:</strong> to comply with laws or government requests.</li>
-        </ul>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>4.</span> Cookies and similar technologies</h4>
-        <p>
-          The Application or its third-party SDKs may use cookies, SDKs, pixels, and similar technologies to support functionality, analytics, and service delivery. Where required by law, the Service Provider will obtain your consent before using non-essential tracking technologies.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>5.</span> Automated decision-making and profiling</h4>
-        <p>
-          If the Application uses automated decision-making, including profiling, that produces legal effects concerning you or similarly significantly affects you, you have the right to request human review, express your point of view, and contest the decision. Information about the logic involved and the likely consequences of that processing will be provided where required by law.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>6.</span> What information does the Application collect automatically?</h4>
-        <p>
-          In addition, the Application may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device's unique device ID, the IP address of your mobile device, your mobile operating system, the type of mobile Internet browsers you use, and information about the way you use the Application.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>7.</span> Does the Application collect precise real time location information of the device?</h4>
-        <p>
-          This Application collects your device's location to provide the following functions:
-        </p>
-        <ul>
-          <li><strong>Geolocation Services:</strong> The Service Provider utilizes location data to provide features such as personalized content, relevant recommendations, and location-based services.</li>
-          <li><strong>Analytics and Improvements:</strong> Aggregated and anonymized location data helps the Service Provider to analyze user behavior, identify trends, and improve the overall performance and functionality of the Application.</li>
-          <li><strong>Third-Party Services:</strong> Periodically, the Service Provider may transmit anonymized location data to external services. These services assist them in enhancing the Application and optimizing their offerings.</li>
-        </ul>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>8.</span> Does the Application use Artificial Intelligence (AI) technologies?</h4>
-        <p>
-          The Application does not use Artificial Intelligence (AI) technologies to process your data or provide features.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>9.</span> Do third parties see and/or have access to information obtained by the Application?</h4>
-        <p>
-          Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.
-        </p>
-        <p>
-          Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:
-        </p>
-        <ul>
-          <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer">Google Play Services</a></li>
-          <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">AdMob</a></li>
-        </ul>
-        <p style="margin-top: 10px;">
-          The Service Provider may disclose User Provided and Automatically Collected Information:
-        </p>
-        <ul>
-          <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
-          <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
-          <li>with their trusted services providers who work on their behalf, do not have an independent use of the information the Service Provider discloses to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
-        </ul>
-        <p style="margin-top: 10px;">
-          Where the GDPR applies, the Service Provider enters into Data Processing Agreements (DPAs) with third-party service providers that process personal data on its behalf, as required by Article 28 of the GDPR. These DPAs impose the same data protection obligations on those service providers as described in this Privacy Policy.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>10.</span> International Data Transfers</h4>
-        <p>
-          The Service Provider or its third-party service providers may transfer personal data outside the European Economic Area (EEA). Where such transfers occur, the Service Provider will use an appropriate transfer mechanism required by GDPR Chapter V:
-        </p>
-        <ul>
-          <li>Adequacy decisions by the European Commission</li>
-          <li>Standard Contractual Clauses (SCCs) approved by the European Commission</li>
-          <li>Other safeguards or derogations recognized under GDPR Chapter V, including consent where legally permitted</li>
-        </ul>
-        <p>
-          Countries outside the EEA may not provide the same level of data protection as the EEA. Where required by law, the Service Provider will apply appropriate safeguards and obtain any consent required for the transfer.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>11.</span> What are my opt-out rights?</h4>
-        <p>
-          You can stop further collection of information from your mobile device by uninstalling the Application. Uninstalling will stop the Application from collecting data from your device, but it does not automatically delete information that has already been transmitted to the Service Provider or to third parties.
-        </p>
-        <p>
-          To request deletion of your personal data, withdraw consent, or exercise any of your rights, contact the Service Provider at <a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a>.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>12.</span> What is the data retention policy and how can you manage your information?</h4>
-        <p>
-          The Service Provider retains personal data based on its necessity for the stated purposes:
-        </p>
-        <ul>
-          <li><strong>User Provided Data:</strong> Retained for the duration of your use of the Application plus 12 months thereafter, unless longer retention is required by law</li>
-          <li><strong>Automatically Collected Data:</strong> Retained for up to 24 months from collection, unless longer retention is required for legal compliance or security purposes</li>
-          <li><strong>Aggregated and Anonymized Data:</strong> Retained indefinitely as it no longer identifies you</li>
-          <li><strong>Data required for legal compliance:</strong> Retained as long as required by applicable law</li>
-        </ul>
-        <p style="margin-top: 10px;">
-          You have the right to request deletion of your personal data at any time, except where retention is required by law. If you'd like the Service Provider to delete User Provided Data that you have provided via the Application, please contact them at <a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a> and they will respond within the time required by applicable law. Please note that some User Provided Data may be required in order for the Application to function properly.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>13.</span> How does the Application address children's privacy?</h4>
-        <p>
-          The Application is not intended for children under 16 years of age, or where a higher age of digital consent is established under applicable law. The Service Provider does not knowingly solicit data from children or market the Application to them.
-        </p>
-        <p>
-          Where parental or guardian consent is required under applicable law, the Application is not intended for use without that consent. The Service Provider does not knowingly collect personally identifiable information from children under 16 years of age, or where a higher age of digital consent is established by applicable law, in violation of applicable law. In the event the Service Provider discovers that a child has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided the Service Provider with personal information, please contact the Service Provider (<a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a>) so that they will be able to take the necessary actions.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>14.</span> How is your information kept secure?</h4>
-        <p>
-          The Service Provider is committed to safeguarding the confidentiality of your information. The Service Provider implements physical, electronic, and procedural safeguards to protect information it processes and maintains. For example, access is limited to authorized employees and contractors who need to know that information to operate, develop, or improve the Application. However, no security system can prevent all potential security breaches.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>15.</span> Data Breach Notification</h4>
-        <p>
-          In the event of a personal data breach that poses a risk to your rights and freedoms, the Service Provider will notify the relevant supervisory authority within 72 hours of becoming aware of the breach, as required by applicable law. Where the breach is likely to result in a high risk to your rights and freedoms, the Service Provider will also notify you without undue delay, providing information about the nature of the breach, the categories of data affected, and the measures taken or proposed to address the breach.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>16.</span> How will you be informed of changes to this Privacy Policy?</h4>
-        <p>
-          The Service Provider may update this Privacy Policy from time to time. The Service Provider will notify you of material changes by posting the updated Privacy Policy with an effective date. Where required by law, the Service Provider will seek your consent to material changes before they take effect.
-        </p>
-        <p>
-          Previous versions of this Privacy Policy will be maintained and made available upon request by contacting the Service Provider at <a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a>.
-        </p>
-        <p style="margin-top: 10px;">
-          <strong>This privacy policy is effective as of 2026-08-05.</strong>
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>17.</span> What are your GDPR data protection rights?</h4>
-        <p>
-          Under the GDPR, you have the following rights:
-        </p>
-        <ul>
-          <li><strong>Right of Access:</strong> You can request access to your personal data.</li>
-          <li><strong>Right to Rectification:</strong> You can request correction of inaccurate data.</li>
-          <li><strong>Right to Erasure:</strong> You can request deletion of your personal data (the "right to be forgotten").</li>
-          <li><strong>Right to Restrict Processing:</strong> You can request that the Data Controller limits how they use your data.</li>
-          <li><strong>Right to Data Portability:</strong> You can request a copy of your data in a structured, commonly used, machine-readable format.</li>
-          <li><strong>Right to Object:</strong> You can object to processing based on legitimate interests. You have an absolute right to object to processing for direct marketing purposes at any time.</li>
-          <li><strong>Right to Withdraw Consent:</strong> Where processing is based on your consent, you can withdraw it at any time. Withdrawal is as simple as toggling preferences in the Application's settings or contacting the Data Controller.</li>
-          <li><strong>Rights Regarding Automated Decision-Making:</strong> You have rights related to automated decisions that affect you.</li>
-        </ul>
-        <p style="margin-top: 10px;">
-          If you believe your data protection rights have been violated, you have the right to lodge a complaint with your local Data Protection Authority. Contact details for each country's Data Protection Authority can be found at: <a href="https://edpb.ec.europa.eu/about-edpb/members_en" target="_blank" rel="noopener noreferrer">European Data Protection Board (EDPB)</a>.
-        </p>
-        <p>
-          If you are located in the United Kingdom, you may contact the Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener noreferrer">ico.org.uk</a>.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>18.</span> What are your California privacy rights (CCPA/CPRA)?</h4>
-        <p>
-          If you are a resident of California, the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA) provide you with additional rights regarding your personal information:
-        </p>
-        <ul>
-          <li><strong>Right to Know:</strong> You can request disclosure of the categories and specific pieces of personal information the Service Provider has collected about you.</li>
-          <li><strong>Right to Delete:</strong> You can request deletion of personal information the Service Provider has collected from you, subject to certain exceptions.</li>
-          <li><strong>Right to Correct:</strong> You can request correction of inaccurate personal information.</li>
-          <li><strong>Right to Opt-Out:</strong> You can opt out of the sale or sharing of your personal information for cross-context behavioral advertising.</li>
-          <li><strong>Right to Limit Use of Sensitive Personal Information:</strong> You can limit the use of your sensitive personal information to essential purposes.</li>
-          <li><strong>Right to Non-Discrimination:</strong> The Service Provider will not discriminate against you for exercising any of your CCPA/CPRA rights.</li>
-        </ul>
-        <p style="margin-top: 10px;">
-          To exercise any of these rights, please contact the Service Provider at <a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a>. The Service Provider will verify your request using the information you provide and respond within the timeframes required by law. You may designate an authorized agent to make a request on your behalf.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>19.</span> How do you give your consent?</h4>
-        <p>
-          Where processing is based on consent, you provide that consent by affirmatively opting in to the relevant feature or action. You may withdraw consent at any time without affecting processing carried out before withdrawal. Processing based on other lawful bases, including contract performance, legitimate interests, or legal obligations, is carried out as described above.
-        </p>
-      </div>
-
-      <div class="policy-block">
-        <h4><span>20.</span> How can you contact the Data Controller?</h4>
-        <p>
-          If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at <a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a>.
-        </p>
-        <p>
-          To request deletion of your personal data or to exercise any of your rights, contact the Service Provider using the details provided above. The Service Provider will respond within one month of receiving your request, extendable by up to two months where necessary due to the complexity or volume of requests, as permitted by applicable law.
-        </p>
-        <div style="margin-top: 14px; padding: 14px 18px; background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(167, 139, 250, 0.22); border-radius: var(--radius-sm);">
-          <strong>Data Controller:</strong> Coral Studios<br>
-          <strong>Location:</strong> Mersin, Türkiye<br>
-          <strong>Official Email:</strong> 
-          <a href="mailto:coralstudiosdev@yandex.com" style="color: var(--purple-300); font-family: var(--font-mono);">coralstudiosdev@yandex.com</a><br>
-          <strong>Authorized Seller Declaration:</strong> 
-          <a href="app-ads.txt" style="color: var(--purple-300); font-family: var(--font-mono);">/app-ads.txt</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-footer">
-      <span>Direct page URL: <a href="privacy.html">/privacy.html</a></span>
-      <button type="button" class="btn btn-secondary" data-close-privacy style="padding: 8px 18px; font-size: 0.85rem;">Close</button>
-    </div>
-  </dialog>
-
-  <div class="toast-container">
-    <div id="toast" class="toast">
-      <svg class="toast-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 6L9 17l-5-5"></path>
-      </svg>
-      <span id="toastMessage">Email copied to clipboard!</span>
-    </div>
-  </div>
-
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
 </body>
 </html>

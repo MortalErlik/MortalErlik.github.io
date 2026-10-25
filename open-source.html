@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open-source notices — Coral Code</title>
+  <meta name="description" content="Third-party open-source components in Coral Code, their licenses and their source code.">
+  <meta name="theme-color" content="#05060a">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/coral-code-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="studio" href="./">Coral <span>Studios</span></a>
+      <nav aria-label="Main">
+        <a href="./#coral-code" class="wide">Coral Code</a>
+        <a href="./#apps">Apps</a>
+        <a href="open-source.html" aria-current="page">Open source</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="doc wide">
+    <div class="wrap">
+      <h1>Open-source notices</h1>
+      <p class="meta">Coral Code 2.0.0 &bull; Generated from the files the app ships</p>
+
+      <p class="intro">Coral Code includes open-source software from other projects. Each component keeps its own license; the full texts are linked below and are also inside the app, under Settings &rarr; About &rarr; Open-source licenses.</p>
+
+      <h2>Source code</h2>
+      <p>For the components under the GPL, LGPL and MPL, the complete corresponding source code of the versions in this release is available as one archive:</p>
+      <p class="box"><a href="https://github.com/MortalErlik/MortalErlik.github.io/releases/download/coral-code-2.0.0-sources/coral-code-2.0.0-third-party-sources.tar">coral-code-2.0.0-third-party-sources.tar</a><br>
+      Recipes, patches and upstream sources: Alpine aports at the exact commits, Ubuntu source packages, Termux build recipes. A SHA256SUMS file inside lists every file.</p>
+      <p>Older releases: <a href="https://github.com/MortalErlik/MortalErlik.github.io/releases">github.com/MortalErlik/MortalErlik.github.io/releases</a>. You can also write to <a href="mailto:coralstudiosdev@yandex.com">coralstudiosdev@yandex.com</a>; we will send the source for any version we distributed, for at least three years after its last distribution.</p>
+
+      <h2>Bundled with the app</h2>
+      <div class="scroll">
+        <table class="table">
+          <thead><tr><th>Component</th><th>Version</th><th>License</th><th>Source</th></tr></thead>
+          <tbody>
+          <tr><td>PRoot (Termux)</td><td class="mono">5.1.107.92 <span class="d">(arm64-v8a)</span><br>5.1.107.98 <span class="d">(x86_64)</span></td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td><td><a href="https://github.com/termux/proot">https://github.com/termux/proot</a> (build recipe: <a href="https://github.com/termux/termux-packages/tree/master/packages/proot">https://github.com/termux/termux-packages/tree/master/packages/proot</a>)</td></tr>
+          <tr><td>talloc</td><td class="mono">2.5.0</td><td><a href="open-source/licenses/LGPL-3.0-or-later.txt">LGPL-3.0-or-later</a></td><td><a href="https://www.samba.org/ftp/talloc/talloc-2.5.0.tar.gz">https://www.samba.org/ftp/talloc/talloc-2.5.0.tar.gz</a></td></tr>
+          <tr><td>libandroid-shmem (Termux)</td><td class="mono">0.7</td><td><a href="open-source/licenses/BSD-3-Clause.txt">BSD-3-Clause</a></td><td><a href="https://github.com/termux/libandroid-shmem">https://github.com/termux/libandroid-shmem</a></td></tr>
+          <tr><td>GNU C Library (Ubuntu glibc)</td><td class="mono">2.39-0ubuntu8.9</td><td><a href="open-source/licenses/LGPL-2.1-or-later.txt">LGPL-2.1-or-later</a></td><td><a href="https://launchpad.net/ubuntu/+source/glibc/2.39-0ubuntu8.9">https://launchpad.net/ubuntu/+source/glibc/2.39-0ubuntu8.9</a></td></tr>
+          <tr><td>GCC runtime libraries (Ubuntu libgcc-s1, libstdc++6)</td><td class="mono">14.2.0-4ubuntu2~24.04.1</td><td><a href="open-source/licenses/GPL-3.0-or-later.txt">GPL-3.0-or-later</a> with <a href="open-source/licenses/GCC-exception-3.1.txt">GCC-exception-3.1</a></td><td><a href="https://launchpad.net/ubuntu/+source/gcc-14/14.2.0-4ubuntu2~24.04.1">https://launchpad.net/ubuntu/+source/gcc-14/14.2.0-4ubuntu2~24.04.1</a></td></tr>
+          <tr><td>Termux terminal-emulator and terminal-view</td><td class="mono">termux-app</td><td><a href="open-source/licenses/Apache-2.0.txt">Apache-2.0</a></td><td><a href="https://github.com/termux/termux-app">https://github.com/termux/termux-app</a></td></tr>
+          <tr><td>Inter and JetBrains Mono fonts</td><td class="mono"></td><td><a href="open-source/licenses/OFL-1.1.txt">OFL-1.1</a></td><td><a href="https://github.com/rsms/inter">https://github.com/rsms/inter</a>, <a href="https://github.com/JetBrains/JetBrainsMono">https://github.com/JetBrains/JetBrainsMono</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Alpine Linux environment</h2>
+      <p>The Linux system inside the app is built from these Alpine Linux packages, the same on ARM64 and x86_64. Recipes: <a href="https://gitlab.alpinelinux.org/alpine/aports">gitlab.alpinelinux.org/alpine/aports</a>.</p>
+      <div class="scroll">
+        <table class="table">
+          <thead><tr><th>Package</th><th>Version</th><th>License</th></tr></thead>
+          <tbody>
+          <tr><td>alpine-baselayout</td><td class="mono">3.7.2-r1</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>alpine-baselayout-data</td><td class="mono">3.7.2-r1</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>alpine-keys</td><td class="mono">2.6-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>alpine-release</td><td class="mono">3.24.3-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>apk-tools</td><td class="mono">3.0.8-r0</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>bash</td><td class="mono">5.3.9-r1</td><td><a href="open-source/licenses/GPL-3.0-or-later.txt">GPL-3.0-or-later</a></td></tr>
+          <tr><td>brotli-libs</td><td class="mono">1.2.1-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>busybox</td><td class="mono">1.37.0-r31</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>busybox-binsh</td><td class="mono">1.37.0-r31</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>c-ares</td><td class="mono">1.34.9-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>ca-certificates</td><td class="mono">20261020-r0</td><td><a href="open-source/licenses/MPL-2.0.txt">MPL-2.0</a> and <a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>ca-certificates-bundle</td><td class="mono">20261020-r0</td><td><a href="open-source/licenses/MPL-2.0.txt">MPL-2.0</a> and <a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>curl</td><td class="mono">8.22.0-r0</td><td><a href="open-source/licenses/curl.txt">curl</a></td></tr>
+          <tr><td>gcompat</td><td class="mono">1.1.0-r4</td><td><a href="open-source/licenses/NCSA.txt">NCSA</a></td></tr>
+          <tr><td>gdbm</td><td class="mono">1.26-r0</td><td><a href="open-source/licenses/GPL-3.0-or-later.txt">GPL-3.0-or-later</a></td></tr>
+          <tr><td>libapk</td><td class="mono">3.0.8-r0</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>libbz2</td><td class="mono">1.0.8-r6</td><td><a href="open-source/licenses/bzip2-1.0.6.txt">bzip2-1.0.6</a></td></tr>
+          <tr><td>libcrypto3</td><td class="mono">3.5.9-r0</td><td><a href="open-source/licenses/Apache-2.0.txt">Apache-2.0</a></td></tr>
+          <tr><td>libcurl</td><td class="mono">8.22.0-r0</td><td><a href="open-source/licenses/curl.txt">curl</a></td></tr>
+          <tr><td>libexpat</td><td class="mono">2.9.0-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>libffi</td><td class="mono">3.5.2-r1</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>libgcc</td><td class="mono">15.2.0-r5</td><td><a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a> and <a href="open-source/licenses/LGPL-2.1-or-later.txt">LGPL-2.1-or-later</a></td></tr>
+          <tr><td>libidn2</td><td class="mono">2.3.8-r0</td><td><a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a> or <a href="open-source/licenses/LGPL-3.0-or-later.txt">LGPL-3.0-or-later</a></td></tr>
+          <tr><td>libncursesw</td><td class="mono">6.6_p20260516-r0</td><td><a href="open-source/licenses/X11.txt">X11</a></td></tr>
+          <tr><td>libpanelw</td><td class="mono">6.6_p20260516-r0</td><td><a href="open-source/licenses/X11.txt">X11</a></td></tr>
+          <tr><td>libpsl</td><td class="mono">0.21.5-r3</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>libssl3</td><td class="mono">3.5.9-r0</td><td><a href="open-source/licenses/Apache-2.0.txt">Apache-2.0</a></td></tr>
+          <tr><td>libstdc++</td><td class="mono">15.2.0-r5</td><td><a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a> and <a href="open-source/licenses/LGPL-2.1-or-later.txt">LGPL-2.1-or-later</a></td></tr>
+          <tr><td>libucontext</td><td class="mono">1.5.1-r0</td><td><a href="open-source/licenses/ISC.txt">ISC</a></td></tr>
+          <tr><td>libunistring</td><td class="mono">1.4.2-r0</td><td><a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a> or <a href="open-source/licenses/LGPL-3.0-or-later.txt">LGPL-3.0-or-later</a></td></tr>
+          <tr><td>mpdecimal</td><td class="mono">4.0.1-r0</td><td><a href="open-source/licenses/BSD-2-Clause.txt">BSD-2-Clause</a></td></tr>
+          <tr><td>musl</td><td class="mono">1.2.6-r3</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>musl-obstack</td><td class="mono">1.2.3-r2</td><td><a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a></td></tr>
+          <tr><td>musl-utils</td><td class="mono">1.2.6-r3</td><td><a href="open-source/licenses/MIT.txt">MIT</a> and <a href="open-source/licenses/BSD-2-Clause.txt">BSD-2-Clause</a> and <a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a></td></tr>
+          <tr><td>ncurses-terminfo-base</td><td class="mono">6.6_p20260516-r0</td><td><a href="open-source/licenses/X11.txt">X11</a></td></tr>
+          <tr><td>nghttp2-libs</td><td class="mono">1.70.0-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>py3-pip</td><td class="mono">26.1.2-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>py3-pip-pyc</td><td class="mono">26.1.2-r0</td><td><a href="open-source/licenses/MIT.txt">MIT</a></td></tr>
+          <tr><td>pyc</td><td class="mono">3.14.8-r0</td><td><a href="open-source/licenses/PSF-2.0.txt">PSF-2.0</a></td></tr>
+          <tr><td>python3</td><td class="mono">3.14.8-r0</td><td><a href="open-source/licenses/PSF-2.0.txt">PSF-2.0</a></td></tr>
+          <tr><td>python3-pyc</td><td class="mono">3.14.8-r0</td><td><a href="open-source/licenses/PSF-2.0.txt">PSF-2.0</a></td></tr>
+          <tr><td>python3-pycache-pyc0</td><td class="mono">3.14.8-r0</td><td><a href="open-source/licenses/PSF-2.0.txt">PSF-2.0</a></td></tr>
+          <tr><td>readline</td><td class="mono">8.3.3-r1</td><td><a href="open-source/licenses/GPL-3.0-or-later.txt">GPL-3.0-or-later</a></td></tr>
+          <tr><td>scanelf</td><td class="mono">1.3.9-r1</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>sqlite-libs</td><td class="mono">3.53.4-r0</td><td><a href="open-source/licenses/blessing.txt">blessing</a></td></tr>
+          <tr><td>ssl_client</td><td class="mono">1.37.0-r31</td><td><a href="open-source/licenses/GPL-2.0-only.txt">GPL-2.0-only</a></td></tr>
+          <tr><td>xz-libs</td><td class="mono">5.8.4-r0</td><td><a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a> and <a href="open-source/licenses/0BSD.txt">0BSD</a> and <a href="open-source/licenses/Public-Domain.txt">Public-Domain</a> and <a href="open-source/licenses/LGPL-2.1-or-later.txt">LGPL-2.1-or-later</a></td></tr>
+          <tr><td>zlib</td><td class="mono">1.3.2-r1</td><td><a href="open-source/licenses/Zlib.txt">Zlib</a></td></tr>
+          <tr><td>zstd-libs</td><td class="mono">1.5.7-r2</td><td><a href="open-source/licenses/BSD-3-Clause.txt">BSD-3-Clause</a> or <a href="open-source/licenses/GPL-2.0-or-later.txt">GPL-2.0-or-later</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Installed later</h2>
+      <p>Languages, language servers and other tools you add inside Coral Code are downloaded from their official sources at that time and keep their own licenses; they are not part of the app.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© 2026 Coral Studios · Mersin, Türkiye</span>
+      <nav aria-label="Footer">
+        <a href="./">Home</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="app-ads.txt">app-ads.txt</a>
+        <button type="button" class="copy-email" data-copy-email>coralstudiosdev@yandex.com</button>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
