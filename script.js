@@ -39,7 +39,8 @@ const seen = new IntersectionObserver((entries) => {
 }, { rootMargin: '0px 0px -12% 0px' });
 document.querySelectorAll('.reveal').forEach((el) => (still ? el.classList.add('in') : seen.observe(el)));
 
-const progressed = [...document.querySelectorAll('[data-progress]')];
+// With scroll timelines the CSS drives these itself (see style.css).
+const progressed = CSS.supports('animation-timeline: view()') ? [] : [...document.querySelectorAll('[data-progress]')];
 const wall = document.querySelector('.lang-wall');
 const words = wall ? [...wall.children] : [];
 const stage = document.querySelector('.stage');
@@ -99,3 +100,31 @@ const onFrame = () => { queued = false; tick(); };
 addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(onFrame); } }, { passive: true });
 addEventListener('resize', () => { if (frame) sizeFrame(current === 3); tick(); });
 tick();
+
+// Mouse wheels step 100 px at a time; on the home page each step glides
+// instead (touchpads, touch screens and keyboards keep the browser's own
+// scrolling). Off when the reader asks for less motion.
+if (document.body.classList.contains('home') && !still && matchMedia('(pointer: fine)').matches) {
+  let target = scrollY, at = scrollY, gliding = false;
+  const glide = () => {
+    at += (target - at) * 0.14;
+    if (Math.abs(target - at) < 0.5) at = target;
+    scrollTo(0, at);
+    gliding = at !== target;
+    if (gliding) requestAnimationFrame(glide);
+  };
+  addEventListener('wheel', (e) => {
+    // Pinch zoom, sideways scrolling and touchpads (small, fractional steps) stay native.
+    if (e.ctrlKey || Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+    const lines = e.deltaMode === 1 ? 40 : e.deltaMode === 2 ? innerHeight : 1;
+    const dy = e.deltaY * lines;
+    if (e.deltaMode === 0 && Math.abs(dy) < 50 && !Number.isInteger(dy)) return;
+    e.preventDefault();
+    if (!gliding) at = target = scrollY;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    target = Math.max(0, Math.min(max, target + dy));
+    if (!gliding) { gliding = true; requestAnimationFrame(glide); }
+  }, { passive: false });
+  // Keyboard, scrollbar and links move the page directly; follow them.
+  addEventListener('scroll', () => { if (!gliding) at = target = scrollY; }, { passive: true });
+}
