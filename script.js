@@ -2,7 +2,16 @@
 if (location.hash === '#privacy') location.replace('privacy.html');
 
 const header = document.querySelector('.top');
-const onScroll = () => header && header.classList.toggle('scrolled', scrollY > 8);
+const light = document.querySelector('.light');
+const onScroll = () => {
+  if (!header) return;
+  header.classList.toggle('scrolled', scrollY > 8);
+  // The bar takes the colours of the section under it.
+  if (light) {
+    const r = light.getBoundingClientRect(), h = header.offsetHeight / 2;
+    header.classList.toggle('on-light', r.top <= h && r.bottom >= h);
+  }
+};
 addEventListener('scroll', onScroll, { passive: true });
 onScroll();
 

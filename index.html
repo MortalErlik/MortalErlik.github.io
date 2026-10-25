@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coral Code — A development environment for Android</title>
-  <meta name="description" content="Coral Code runs a Linux system inside the app: write, run, debug and build in 13 languages and Flutter, on an Android tablet or phone from 4 GB of RAM up.">
+  <title>Coral Code — Coding on your Android tablet</title>
+  <meta name="description" content="Coral Code brings Linux, compilers, an editor and a live preview to your Android tablet or phone. 13 languages and Flutter, runs on 4 GB of RAM, works offline.">
   <meta name="theme-color" content="#000000">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Coral Studios">
   <meta property="og:title" content="Coral Code">
-  <meta property="og:description" content="A real Linux workstation, on your tablet.">
+  <meta property="og:description" content="A full coding setup, right on your tablet.">
   <meta property="og:image" content="assets/shots/workspace-1000.webp">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/coral-code-64.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -22,104 +22,131 @@
     <div class="wrap">
       <a class="studio" href="./">Coral <span>Studios</span></a>
       <nav aria-label="Main">
-        <a href="#coral-code" class="wide">Coral Code</a>
-        <a href="#apps">Apps</a>
-        <a href="open-source.html">Open source</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="#features" class="wide">Features</a>
+        <a href="#apps" class="wide">Apps</a>
+        <a href="open-source.html" class="wide">Open source</a>
+        <a href="privacy.html" class="wide">Privacy</a>
+        <a class="pill" href="mailto:coralstudiosdev@yandex.com?subject=Coral%20Code">Get notified</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- 1. The product, landing flat as you scroll. -->
     <section class="hero" id="coral-code">
+      <div class="aurora" aria-hidden="true"><span></span><span></span></div>
       <div class="wrap center">
-        <img class="mark" src="assets/coral-code-192.png" alt="" width="64" height="64">
-        <p class="product">Coral Code</p>
-        <h1>Your whole dev setup.<br><span class="glow">Now on your tablet.</span></h1>
-        <p class="lede">Real Linux. Real toolchains. Nothing in the cloud.</p>
+        <p class="eyebrow"><img decoding="async" src="assets/coral-code-64.png" alt="" width="28" height="28">Coral Code</p>
+        <h1>A full coding setup,<br><span class="glow">right on your tablet.</span></h1>
+        <p class="lede">Linux, compilers, an editor and a live preview, all running on the device. No remote machine, and it works offline.</p>
         <div class="actions">
           <span class="status">Coming soon to Google Play</span>
-          <a class="link" href="mailto:coralstudiosdev@yandex.com?subject=Coral%20Code">Tell me when it’s out ›</a>
+          <a class="link" href="mailto:coralstudiosdev@yandex.com?subject=Coral%20Code">Let me know when it’s out ›</a>
         </div>
       </div>
       <div class="land" data-progress>
         <figure class="device">
-          <img src="assets/shots/workspace.webp" srcset="assets/shots/workspace-1000.webp 1000w, assets/shots/workspace.webp 2000w" sizes="(max-width: 1180px) 92vw, 1100px" alt="Coral Code on a tablet: files, a Python file in the editor, the program’s output and a live preview of the page it serves." width="2000" height="1052">
+          <img decoding="async" src="assets/shots/workspace.webp" srcset="assets/shots/workspace-1000.webp 1000w, assets/shots/workspace.webp 2000w" sizes="(max-width: 1180px) 92vw, 1100px" alt="Coral Code on a tablet: files, a Python file in the editor, the program’s output and a live preview of the page it serves." width="2000" height="1052">
         </figure>
       </div>
     </section>
 
-    <!-- 2. The headline claim, right after the product. -->
-    <section class="langs-block">
-      <div class="wrap center">
-        <h2 class="reveal">13 languages and Flutter.<br><span class="glow">One tap each.</span></h2>
-        <p class="sub reveal">Real compilers. Real debuggers. In the versions you choose.</p>
-      </div>
-      <ul class="lang-wall" aria-label="Supported languages">
-        <li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Go</li><li>Rust</li><li>C</li><li>C++</li>
-        <li>Java</li><li>Kotlin</li><li>Dart</li><li>Flutter</li><li>PHP</li><li>Lua</li><li>Zig</li>
-      </ul>
-    </section>
-
-    <!-- 3. One device, transforming as you scroll. -->
     <section class="stage">
       <div class="stage-pin">
         <div class="stage-text" aria-live="polite">
-          <div class="step" data-step="0"><p class="kicker">Classic</p><h2>Everything at a glance.</h2><p>Files, code, console and preview. Side by side.</p></div>
-          <div class="step" data-step="1"><p class="kicker">Focus</p><h2>Just the code.</h2><p>One island fills the screen. The rest are a tap away.</p></div>
-          <div class="step" data-step="2"><p class="kicker">Free</p><h2>Your layout. Your rules.</h2><p>Split anything. Drag anything. Save it for later.</p></div>
-          <div class="step" data-step="3"><p class="kicker">One tap</p><h2>Now it’s a phone.</h2><p>Tap the logo to flip between tablet and phone layouts. On DeX, it opens straight to desktop.</p></div>
+          <div class="step" data-step="0"><p class="kicker">Layouts</p><h2>See everything at once.</h2><p>Files, code, the console and the preview sit side by side, and you can resize each one.</p></div>
+          <div class="step" data-step="1"><p class="kicker">Layouts</p><h2>Or just the code.</h2><p>Focus gives one panel the whole screen. The others are a tap away at the bottom.</p></div>
+          <div class="step" data-step="2"><p class="kicker">Layouts</p><h2>Arrange it the way you work.</h2><p>Split the screen however you like and drag panels into place. Save the layouts you use often.</p></div>
+          <div class="step" data-step="3"><p class="kicker">Layouts</p><h2>Holding it like a phone?</h2><p>Tap the logo to switch to the phone layout. Plug into a monitor and it opens in desktop mode.</p></div>
         </div>
         <div class="stage-device">
           <div class="frame">
-            <img data-shot="0" src="assets/shots/workspace-1000.webp" srcset="assets/shots/workspace-1000.webp 1000w, assets/shots/workspace.webp 2000w" sizes="60vw" alt="Classic layout." width="2000" height="1052">
-            <img data-shot="1" src="assets/shots/focus-sm.webp" srcset="assets/shots/focus-sm.webp 1000w, assets/shots/focus.webp 2000w" sizes="60vw" alt="Focus layout: the editor alone." width="2000" height="1052">
-            <img data-shot="2" src="assets/shots/free-sm.webp" srcset="assets/shots/free-sm.webp 1000w, assets/shots/free.webp 2000w" sizes="60vw" alt="Free layout: preview, Claude Code, console and editor in columns." width="2000" height="1052">
-            <img data-shot="3" src="assets/shots/phone-code-sm.webp" srcset="assets/shots/phone-code-sm.webp 600w, assets/shots/phone-code.webp 1200w" sizes="40vh" alt="Phone layout: the editor with a tab bar." width="1200" height="1848">
+            <img decoding="async" data-shot="0" src="assets/shots/workspace-1000.webp" srcset="assets/shots/workspace-1000.webp 1000w, assets/shots/workspace.webp 2000w" sizes="60vw" alt="All four panels side by side." width="2000" height="1052">
+            <img decoding="async" data-shot="1" src="assets/shots/focus-sm.webp" srcset="assets/shots/focus-sm.webp 1000w, assets/shots/focus.webp 2000w" sizes="60vw" alt="Focus layout: the editor alone." width="2000" height="1052">
+            <img decoding="async" data-shot="2" src="assets/shots/free-sm.webp" srcset="assets/shots/free-sm.webp 1000w, assets/shots/free.webp 2000w" sizes="60vw" alt="Free layout: preview, Claude Code, console and editor in columns." width="2000" height="1052">
+            <img decoding="async" data-shot="3" src="assets/shots/phone-code-sm.webp" srcset="assets/shots/phone-code-sm.webp 600w, assets/shots/phone-code.webp 1200w" sizes="40vh" alt="Phone layout: the editor with a tab bar." width="1200" height="1848">
           </div>
           <ol class="dots" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
         </div>
       </div>
     </section>
 
-    <!-- 4. The constraint it was built for. -->
-    <section class="ram">
+    <section class="light" id="features">
       <div class="wrap center">
-        <p class="big" data-progress>4&nbsp;GB</p>
-        <h2 class="reveal">Light on memory.<br>Scales to whatever you have.</h2>
-        <p class="sub reveal">Runs smoothly on everyday tablets. Give it more memory, and builds speed up on their own.</p>
-        <p class="fine reveal">Tested on a TCL NXTPAPER 11 with 4 GB of RAM.</p>
+        <h2 class="reveal">Everything a project needs.<br><span class="soft">On the device itself.</span></h2>
       </div>
+      <div class="bento">
+        <article class="tile dark span-4 langs reveal">
+          <div class="tile-text">
+            <h3>13 languages and Flutter</h3>
+            <p>Each with its compiler, language server and debugger. Install the ones you need, in the versions you want.</p>
+          </div>
+          <ul class="lang-wall" aria-label="Supported languages">
+            <li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Go</li><li>Rust</li><li>C</li><li>C++</li>
+            <li>Java</li><li>Kotlin</li><li>Dart</li><li>Flutter</li><li>PHP</li><li>Lua</li><li>Zig</li>
+          </ul>
+        </article>
+
+        <article class="tile span-2 ram reveal">
+          <p class="gb">4 GB</p>
+          <h3>Runs on 4 GB of RAM</h3>
+          <p>Lighter on memory when it’s tight, faster builds when there’s more.</p>
+          <img decoding="async" class="chip" src="assets/shots/ram.png" alt="The app’s status bar: RAM 2.4 of 3.8 GB." width="194" height="36" loading="lazy">
+        </article>
+
+        <article class="tile dark span-3 media reveal">
+          <div class="tile-text">
+            <h3>See it run</h3>
+            <p>Web pages and local servers open in a preview next to your code.</p>
+          </div>
+          <img decoding="async" class="bleed" src="assets/shots/fractal.webp" alt="A Mandelbrot image rendered by Python, shown in the preview." width="930" height="784" loading="lazy">
+        </article>
+
+        <article class="tile dark span-3 media reveal">
+          <div class="tile-text">
+            <h3>Bring your AI assistant</h3>
+            <p>Claude Code, Codex or Gemini CLI can work inside your project, next to your code.</p>
+          </div>
+          <img decoding="async" class="inset" src="assets/shots/assistant.webp" alt="Claude Code open in Coral Code’s assistant panel." width="514" height="402" loading="lazy">
+        </article>
+
+        <article class="tile dark span-4 media reveal">
+          <div class="tile-text">
+            <h3>A real Linux underneath</h3>
+            <p>Alpine Linux comes built in. Install packages with apk, just like on a server.</p>
+          </div>
+          <img decoding="async" class="inset wide" src="assets/shots/terminal.webp" alt="The terminal: python3 --version and ls in a project folder." width="1040" height="240" loading="lazy">
+        </article>
+
+        <article class="tile span-2 reveal">
+          <p class="apk">.apk</p>
+          <h3>Build Android apps</h3>
+          <p>Gradle, Flutter and the Android SDK run on the device. Sign releases with your own keys.</p>
+        </article>
+
+        <article class="tile dark span-3 media reveal">
+          <div class="tile-text">
+            <h3>Debug, not just print</h3>
+            <p>Set breakpoints, step through code and watch variables, in every supported language.</p>
+          </div>
+          <img decoding="async" class="inset" src="assets/shots/editor.webp" alt="The editor with Python code and its build, live, debug and stop buttons." width="1040" height="526" loading="lazy">
+        </article>
+
+        <article class="tile span-3 keys reveal">
+          <div class="keycaps" aria-hidden="true"><kbd>Ctrl</kbd><kbd>K</kbd></div>
+          <h3>Keyboard and mouse ready</h3>
+          <p>Shortcuts, a command palette and resizable panels when you plug in a keyboard.</p>
+        </article>
+      </div>
+      <p class="fine center">The Free and Side by side layouts, the terminal and the AI assistant are part of Coral Code Pro.</p>
     </section>
 
-    <!-- 5. The assistant. -->
-    <section class="block split">
-      <div class="wrap">
-        <div class="split-text reveal">
-          <p class="kicker">AI</p>
-          <h2>Your AI pair programmer. Right next to the code.</h2>
-          <p class="sub">Run Claude Code, Codex or Gemini CLI inside your project. Watch it work in the preview.</p>
+    <section class="closing">
+      <div class="wrap center">
+        <img decoding="async" class="mark big-mark reveal" src="assets/coral-code-192.png" alt="" width="112" height="112">
+        <h2 class="reveal">Coral Code is coming<br>to Google Play.</h2>
+        <div class="actions reveal">
+          <a class="status" href="mailto:coralstudiosdev@yandex.com?subject=Coral%20Code">Get notified</a>
         </div>
-        <figure class="panel tall reveal">
-          <img src="assets/shots/assistant.webp" alt="Claude Code open in the assistant island of Coral Code, in the project folder." width="514" height="402" loading="lazy">
-        </figure>
-      </div>
-    </section>
-
-    <!-- 6. The rest, briefly. -->
-    <section class="block">
-      <div class="wrap center"><h2 class="reveal">Everything else you’d expect.</h2></div>
-      <div class="wrap">
-        <ul class="tiles">
-          <li class="reveal"><h3>Linux inside</h3><p>A full Alpine Linux. Install anything with apk.</p></li>
-          <li class="reveal"><h3>Android apps</h3><p>Build and sign real APKs. On the tablet itself.</p></li>
-          <li class="reveal"><h3>Debugger</h3><p>Breakpoints and watches, in every language.</p></li>
-          <li class="reveal"><h3>Live preview</h3><p>Your page, running next to your code.</p></li>
-          <li class="reveal"><h3>Terminal and Git</h3><p>A real shell and real Git, right in your project.</p></li>
-          <li class="reveal"><h3>Keyboard and mouse</h3><p>Plug them in, and it works like a laptop.</p></li>
-        </ul>
-        <p class="fine center">Free and Side by side layouts, the terminal and the AI assistant are part of Coral Code Pro.</p>
       </div>
     </section>
 
@@ -127,10 +154,10 @@
       <div class="wrap center">
         <p class="kicker">Also from Coral Studios</p>
         <article class="app reveal">
-          <img src="assets/prayer-times-144.png" alt="" width="72" height="72">
+          <img decoding="async" src="assets/prayer-times-144.png" alt="" width="72" height="72">
           <div>
             <h3>Simple Prayer Times &amp; Widget</h3>
-            <p>Prayer times and a home-screen widget. Works offline, collects no personal data.</p>
+            <p>Prayer times and a home-screen widget. Works offline and collects no personal data.</p>
           </div>
           <a class="button" href="https://play.google.com/store/apps/details?id=com.coralstudios.sadenamaz" target="_blank" rel="noopener noreferrer">Google Play</a>
         </article>
